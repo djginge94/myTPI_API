@@ -6,7 +6,6 @@
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "dev": "firebase emulators:start --only functions"
   },
@@ -29,7 +28,9 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.0.1",
     "firebase-functions-test": "^0.1.6",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^7.12.1"
   },
   "private": true
 }

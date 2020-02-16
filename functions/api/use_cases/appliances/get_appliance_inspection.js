@@ -1,8 +1,11 @@
 const db = require("../../services/firebase").appliance_database;
+const sectionHelper = require("../../helpers/appliance_section_helper");
 
 function createResource(snap) {
   const obj = snap.val();
   obj.id = snap.key;
+  console.log(obj, "OBJ");
+  obj.sections = sectionHelper.sectionsFor(snap);
   return obj;
 }
 

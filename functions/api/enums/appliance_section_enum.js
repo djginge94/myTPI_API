@@ -1,0 +1,2 @@
+exports.INSPECTION_DETAILS = 0;
+exports.APPLIANCE_DETAILS = 1;

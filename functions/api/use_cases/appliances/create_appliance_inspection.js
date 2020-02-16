@@ -1,41 +1,10 @@
 const db = require("../../services/firebase").appliance_database;
-
-const inputType = {
-  TEXT: 0,
-  DATE: 1
-};
-
-const row = {
-  NAME: {
-    index: 0,
-    title: "Name",
-    input: inputType.TEXT
-  }
-};
-
-const section = {
-  INSEPCTION_DETAILS: {
-    index: 0,
-    title: "Insection Details"
-  }
-};
-
-const appliance = {
-  MOBILE_CRANE: {
-    _index: 0,
-    sections: [
-      {
-        type: section.INSEPCTION_DETAILS,
-        rows: [row.NAME]
-      }
-    ]
-  }
-};
+const sectionHelper = require("../../helpers/appliance_section_helper");
 
 function createResource(snap) {
   const obj = snap.val();
   obj.id = snap.key;
-  obj.sections = appliance.MOBILE_CRANE.sections;
+  obj.sections = sectionHelper.sectionsFor(snap);
   return obj;
 }
 

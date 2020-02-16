@@ -42,3 +42,11 @@ exports.delete_inspection = (req, res) => {
     .catch($0 => res.status(500).send($0))
     .finally(() => res.end());
 };
+
+exports.get_rows = (req, res) => {
+  const useCase = require("../use_cases/appliances/get_appliance_rows");
+  useCase(req.params.applianceId, req.params.sectionId)
+    .then($0 => res.status(200).send($0))
+    .catch($0 => res.status(500).send($0))
+    .finally(() => res.end())
+}

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const applianceController = require("../controllers/appliance_controller");
 
 module.exports = app => {

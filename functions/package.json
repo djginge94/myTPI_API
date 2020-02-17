@@ -7,7 +7,7 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "logs": "firebase functions:log",
-    "dev": "firebase emulators:start --only functions"
+    "dev": "export GOOGLE_APPLICATION_CREDENTIALS=./.config/mytpi-dde27-firebase-adminsdk-w8bow-48ec8ac356.json && firebase emulators:start --only functions"
   },
   "engines": {
     "node": "10"
@@ -29,7 +29,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "firebase-functions-test": "^0.1.6",
     "prettier": "^1.19.1",
-    "firebase-functions-test": "^0.1.6",
     "firebase-tools": "^7.12.1"
   },
   "private": true

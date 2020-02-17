@@ -1,7 +1,8 @@
 const applianceController = require("../controllers/appliance_controller");
 
 module.exports = app => {
-  app.route("/").get((req, res) => {
+  app.route("/test").get((req, res) => {
+    res.send(process.env.TEST);
     res.end();
   });
 
